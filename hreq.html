@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Settings</title>
+     <link rel="stylesheet" href="hreq2.html">
+     <style>
+         body{
+            
+            font-family: Arial, sans-serif;
+            
+            margin: 20px;
+                  background-image: url('aih_hreq2.jpg');
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-size: cover;
+                  background-position: center center;
+          
+              }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: column;
+            font-family: Arial, sans-serif; 
+        }
+        p{
+            letter-spacing: 2px;
+            line-height: 5px;
+        }
+
+       
+        form p {
+            font-size: 15px;
+            margin-bottom: 1px;
+        }
+
+       
+        h1 {
+            font-size: 30px;
+            margin-bottom: 0.5px; 
+        }
+
+      
+        h2 {
+            font-size: 24px;
+            margin-bottom: 0.5px;
+            margin: 0.5; 
+        }
+      
+        .section {
+            margin-bottom: 1px;
+        }
+        button{
+            display: block;
+            margin: auto;
+            font-size: 35px;
+        }
+        .small-button{
+            align-items: center;
+            
+        }
+        li{
+            display: inline;
+            margin:100px;
+        }
+
+        li a {
+            color: white;
+            text-decoration: none;
+        }
+        li a:hover {
+            color: skyblue ;
+            text-decoration: underline;
+        }
+        footer{
+            text-align: center;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Health Issues</h1>
+    <form>
+
+        <p><input type="checkbox" name="health_issue" value="Heart Attack"><b>Heart Attack</b> (Chest pain or discomfort, pain in the arms, back, neck, jaw, or stomach, shortness of breath, cold sweat, nausea)</p>
+        <p><input type="checkbox" name="health_issue" value="Stroke"><b>Stroke</b>( Sudden numbness or weakness, arm, or leg, sudden confusion, trouble speaking , dizziness, lack of coordination)</p>
+        <p><input type="checkbox" name="health_issue" value="Labor pains"><b>Labor pains</b>(Contractions,Increasing Intensity,Frequency,Water break,Backpain,Lower Abdominal Pressure)</p>
+        <p><input type="checkbox" name="health_issue" value="Poisoning"><b>Poisoning</b>(Nausea, vomiting, abdominal pain, diarrhea, dizziness, difficulty breathing,specific symptoms depending on the type of poison)</p>
+        <p><input type="checkbox" name="health_issue" value="Fever"><b>Fever</b> (Elevated Body Temperature,Chills and Shivering,Loss of Appetite,Dehydration,Breathing Difficulty,Cough,cold,)</p>
+        <p><input type="checkbox" name="health_issue" value="Fainting"><b>Fainting</b>(Syncope)(Feeling lightheaded, dizzy, or nauseous, pale skin, sweating, blurred vision, and loss of consciousness)</p>
+        <p><input type="checkbox" name="health_issue" value="Fractures"><b>Fractures</b>(Pain, swelling, bruising, deformity or abnormal positioning of the affected area, inability to bear weight or move the injured part)</p>
+        <p><input type="checkbox" name="health_issue" value="Bleeding"><b>Bleeding and Wounds</b>(Visible bleeding, blood-soaked clothing, deep cuts or lacerations, pain, and swelling.)</p>
+          
+        <h2>Ambulance Required?</h2>
+        <p><input type="radio" name="ambulance_required" value="Yes">Yes</p>
+        <p><input type="radio" name="ambulance_required" value="No">No</p>
+
+        <h2>Hospital Type</h2>
+        <p><input type="radio" name="hospital_type" value="Government Hospital">Government Hospital</p>
+        <p><input type="radio" name="hospital_type" value="Community Hospital">Community Hospital</p>
+        <p><input type="radio" name="hospital_type" value="Private Hospital">Private Hospital</p>
+        <footer>
+            <a href="output.html" target="_blank"> Submit</a>
+                   
+        </footer>
+    </form>
+</body>
+</html>

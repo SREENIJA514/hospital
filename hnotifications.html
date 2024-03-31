@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Requests</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .patient-card {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .patient-card h2 {
+      margin-top: 0;
+    }
+
+    .patient-card p {
+      margin: 5px 0;
+    }
+
+    .notification {
+      display: none;
+      padding: 10px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+
+    .accept-notification {
+      background-color: #61bb64;
+      color: #ffffff;
+    }
+
+    .reject-notification {
+      background-color: #f06161;
+      color: #ffffff;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .accept-button, .reject-button {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .accept-button {
+      background-color: #45c049;
+      color: #ffffff;
+    }
+
+    .reject-button {
+      background-color: #f63535;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="patient-card">
+    <h2>Patient 1</h2>
+    <p><strong>Problem:</strong> Heart Attack</p>
+    <p><strong>Symptoms:</strong> Chest pain, pain in the arms, shortness of breath, cold sweat</p>
+    <div class="notification" id="notification-1"></div>
+    <div class="button-container">
+      <button class="accept-button" onclick="acceptRequest('notification-1')">Accept Request</button>
+      <button class="reject-button" onclick="rejectRequest('notification-1')">Reject Request</button>
+    </div>
+  </div>
+
+  <div class="patient-card">
+    <h2>Patient 2</h2>
+    <p><strong>Problem:</strong> Influenza</p>
+    <p><strong>Symptoms:</strong> Fever, cough, sore throat, body aches, fatigue</p>
+    <div class="notification" id="notification-2"></div>
+    <div class="button-container">
+      <button class="accept-button" onclick="acceptRequest('notification-2')">Accept Request</button>
+      <button class="reject-button" onclick="rejectRequest('notification-2')">Reject Request</button>
+    </div>
+  </div>
+
+  <div class="patient-card">
+    <h2>Patient 3</h2>
+    <p><strong>Problem:</strong> Fractured Arm</p>
+    <p><strong>Symptoms:</strong> Swelling, bruising, limited range of motion</p>
+    <div class="notification" id="notification-3"></div>
+    <div class="button-container">
+      <button class="accept-button" onclick="acceptRequest('notification-3')">Accept Request</button>
+      <button class="reject-button" onclick="rejectRequest('notification-3')">Reject Request</button>
+    </div>
+  </div>
+
+  <script>
+    function showNotification(notificationId, message, className) {
+      const notification = document.getElementById(notificationId);
+      notification.innerText = message;
+      notification.className = `notification ${className}`;
+      notification.style.display = 'block';
+    }
+
+    function acceptRequest(notificationId) {
+      showNotification(notificationId, 'Request Accepted', 'accept-notification');
+    }
+
+    function rejectRequest(notificationId) {
+      showNotification(notificationId, 'Request Rejected', 'reject-notification');
+    }
+  </script>
+</body>
+</html>

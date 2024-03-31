@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign UP Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+      padding:20px;
+      background-image: url('aih_back2.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .signin-container {
+      display: flex;
+      justify-content: center;
+    }
+    .signin-form {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 10px;
+      width: 300px;
+      background-color: #f7eaea;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to EmergeXpert!!</h1>
+
+  <div class="signin-container">
+    <div class="signin-form" id="userSignupForm">
+      <h2>User Sign Up</h2>
+      <form id="userRegistrationForm">
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" required>
+        <br><br>
+        <label for="userUsername">Username:</label>
+        <input type="text" id="userUsername" required>
+        <br><br>
+        <label for="userPassword">Password:</label>
+        <input type="password" id="userPassword" required>
+        <br><br>
+        <label for="userConfirmPassword">Confirm Password:</label>
+        <input type="password" id="userConfirmPassword" required>
+        <br><br>
+        <button type="submit">Sign Up</button>
+        <br><br>
+        <p>Already have an account?</p>
+	<a href="userlogin.html">Login</a>
+      </form>
+    </div>
+
+    <div class="signin-form" id="HospitalSignupForm">
+      <h2>Hospital Sign Up</h2>
+      <form id="HospitalRegistrationForm">
+        <label for="HospitalEmail">Email:</label>
+        <input type="email" id="HospitalEmail" required>
+        <br><br>
+        <label for="HospitalUsername">Username:</label>
+        <input type="text" id="HospitalUsername" required>
+        <br><br>
+        <label for="HospitalPassword">Password:</label>
+        <input type="password" id="HospitalPassword" required>
+        <br><br>
+        <label for="HospitalConfirmPassword">Confirm Password:</label>
+        <input type="password" id="HospitalConfirmPassword" required>
+        <br><br>
+        <button type="submit">Sign Up</button>
+        <br><br>
+        <p>Already have an account?</p>
+	<a href="hospitallogin.html">Login</a>
+      </form>
+    </div>
+    <div class="signin-form" id="adminSignupForm">
+      <h2>Admin Sign Up</h2>
+      <form id="adminRegistrationForm">
+        <label for="adminEmail">Email:</label>
+        <input type="email" id="adminEmail" required>
+        <br><br>
+        <label for="adminUsername">Username:</label>
+        <input type="text" id="adminUsername" required>
+        <br><br>
+        <label for="adminPassword">Password:</label>
+        <input type="password" id="adminPassword" required>
+        <br><br>
+        <label for="adminConfirmPassword">Confirm Password:</label>
+        <input type="password" id="adminConfirmPassword" required>
+        <br><br>
+        <button type="submit">Sign Up</button>
+        <br><br>
+        <p>Already have an account?</p>
+	<a href="adminlogin.html">Login</a>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Equipment Selection</title>
+    <style>
+        body{
+            
+      font-family: Arial, sans-serif;
+      
+      margin: 20px;
+            background-image: url('aih_equip3.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+    
+        }
+        .title-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .equipment-list {
+            margin-left: 30px;
+            margin-top: 5px; 
+        }
+        .equipment-list h2 {
+            margin-bottom: 5px; 
+        }
+        .update-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1>Hospital Equipment Selection</h1>
+        
+    </div>
+    <form>
+        <div class="equipment-list">
+            <h2>Diagnostic Equipment:</h2>
+            <label><input type="checkbox" name="diagnostic" value="X-ray">X-ray machines</label><br>
+            <label><input type="checkbox" name="diagnostic" value="MRI">MRI (Magnetic Resonance Imaging) scanners</label><br>
+            <label><input type="checkbox" name="diagnostic" value="CT">CT(Computed Tomography) scanners</label><br>
+            <label><input type="checkbox" name="diagnostic" value="US">Ultrasound machines</label><br>
+            <label><input type="checkbox" name="diagnostic" value="ECG">ECG(Electrocardiogram) machines</label><br>
+            <label><input type="checkbox" name="diagnostic" value="EEG">EEG(Electroencephalogram) machines</label><br>
+            <label><input type="checkbox" name="diagnostic" value="BP">Blood pressure monitors</label><br>
+            <label><input type="checkbox" name="diagnostic" value="PO">Pulse oximeters</label><br>
+            <label><input type="checkbox" name="diagnostic" value="LE">Laboratory Equipment(Blood,Urine others)</label><br>
+
+            <h2>Surgical Equipment:</h2>
+            <label><input type="checkbox" name="surgical" value="Tables">Surgical tables</label><br>
+            <label><input type="checkbox" name="surgical" value="AM">Anesthesia Machines</label><br>
+            <label><input type="checkbox" name="surgical" value="CM">C-arm fluoroscopy machines</label><br>
+            <label><input type="checkbox" name="surgical" value="EU">Electrosurgical units</label><br>
+
+            <h2>Monitoring Equipment:</h2>
+            <label><input type="checkbox" name="Monitoring" value="Ventilators">Ventilators</label><br>
+            <label><input type="checkbox" name="Monitoring" value="PM">Patient Monitors</label><br>
+            <label><input type="checkbox" name="Monitoring" value="IP">Infusion pumps</label><br>
+            <label><input type="checkbox" name="Monitoring" value="DF">Defibrillators</label><br>
+            <label><input type="checkbox" name="Monitoring" value="HM">Hemodialysis machines</label><br>
+            <label><input type="checkbox" name="Monitoring" value="CM">Cardiac Monitors</label><br>
+
+            <h2>Therapeutic Equipment:</h2>
+            <label><input type="checkbox" name="Therapeutic" value="PE">Physical therapy Equipment</label><br>
+            <label><input type="checkbox" name="Therapeutic" value="RM">Radiation therapy machines</label><br>
+            <label><input type="checkbox" name="Therapeutic" value="CP">chemotherapy infusion pumps</label><br>
+            <label><input type="checkbox" name="Therapeutic" value="HO">Hyperbaric oxygen chambers</label><br>
+            <label><input type="checkbox" name="Therapeutic" value="RE">Rehabilation Equipment</label><br>
+
+            <h2>Medical Imaging Equipment:</h2>
+            <label><input type="checkbox" name="Medical" value="PET">PET(Positron Emission Tomography) scanners</label><br>
+            <label><input type="checkbox" name="Medical" value="SPECT">SPECT(Single Photon Emission computed Tomography) scanners</label><br> 
+            <label><input type="checkbox" name="Medical" value="MM">Mammography machines</label><br> 
+            <label><input type="checkbox" name="Medical" value="FM">Fluoroscopy machines</label><br> 
+            
+            <h2>Laboratory Equipment:</h2>
+            <label><input type="checkbox" name="Laboratory" value="MS">Microscopes</label><br> 
+            <label><input type="checkbox" name="Laboratory" value="CF">Centrifuges</label><br>
+            <label><input type="checkbox" name="Laboratory" value="AC">Autoclaves</label><br>
+            <label><input type="checkbox" name="Laboratory" value="IN">Incubators</label><br>
+            <label><input type="checkbox" name="Laboratory" value="SM">Spectrophotometers</label><br>
+
+        </div>
+        
+       
+        <div class="update-button">
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</body>
+</html>

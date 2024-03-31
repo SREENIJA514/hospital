@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Notification</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .notification {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+</style>
+</head>
+<body>
+
+<div class="notification" id="notification">
+ 
+</div>
+
+<div class="popup" id="popup">
+  <h2>Hospital Decision</h2>
+  <p>The hospital has made a decision regarding your application.</p>
+  <p id="popupMessage"></p>
+</div>
+
+<script>
+  const notification = document.getElementById('notification');
+  const popup = document.getElementById('popup');
+  const popupMessage = document.getElementById('popupMessage');
+
+  
+  const hospitalResponse = Math.random() < 0.5 ? 'accepted' : 'rejected';
+
+  if (hospitalResponse === 'accepted') {
+    notification.innerText = 'Congratulations! You have been accepted by the hospital.';
+    notification.style.backgroundColor = '#008000';
+  } else {
+    notification.innerText = 'We regret to inform you that your application has been rejected by the hospital.';
+    notification.style.backgroundColor = '#FF0000';
+  }
+
+  
+  setTimeout(() => {
+    notification.style.display = 'block';
+    popup.style.display = 'block';
+    popupMessage.innerText = hospitalResponse === 'accepted' ? 'You have been accepted.' : 'You have been rejected.';
+  }, 2000); 
+</script>
+
+</body>
+</html>

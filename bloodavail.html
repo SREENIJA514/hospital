@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Blood Groups</title>
+  <style>
+     body{
+            
+            font-family: Arial, sans-serif;
+            font-size: larger;
+            
+            margin: 20px;
+                  background-image: url('aih_back4.jpg');
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-size: cover;
+                  background-position: center center;
+          
+              }
+    .blood-group {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1>Available Blood Groups</h1>
+    
+    <form id="bloodGroupForm">
+      <label class="blood-group"><input type="checkbox" name="bloodGroup" value="A+"> A+</label>
+      <label class="blood-group"><input type="checkbox" name="bloodGroup" value="A-"> A-</label>
+      <label class="blood-group"><input type="checkbox" name="bloodGroup" value="B+"> B+</label>
+      <label class="blood-group"><input type="checkbox" name="bloodGroup" value="B-"> B-</label>
+      <label class="blood-group"><input type="checkbox" name="bloodGroup" value="AB+"> AB+</label>
+      <label class="blood-group"><input type="checkbox" name="bloodGroup" value="AB-"> AB-</label>
+      <label class="blood-group"><input type="checkbox" name="bloodGroup" value="O+"> O+</label>
+      <label class="blood-group"><input type="checkbox" name="bloodGroup" value="O-"> O-</label>
+      
+      
+      <br><br>
+      <button type="large-button" onclick="updateBloodGroups()">Update</button>
+      <p id="output"></p>
+    </form>
+  </div>
+  
+  <script>
+    function updateBloodGroups() {
+      const form = document.getElementById("bloodGroupForm");
+      const selectedBloodGroups = Array.from(form.elements.bloodGroup)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+      
+      const outputElement = document.getElementById("output");
+      outputElement.textContent = "Selected Blood Groups: " + selectedBloodGroups.join(", ");
+    }
+  </script>
+</body>
+</html>

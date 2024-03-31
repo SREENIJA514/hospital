@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Logins in One Page</title>
+  <style type="text/css">
+    .img-container {
+      text-align: center;
+      margin-bottom: auto;
+      /* Remove position and alignment properties to align the container to the left */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+ 
+    /* Basic styling, you can modify it to fit your design */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      justify-content: flex-start; /* Align the container to the left */
+      align-items: flex-start;
+      height: 100vh;
+    }
+    .login-container,
+    .img-container {
+      flex: 1;
+    }
+    .login-container {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 30px;
+      margin: 50px;
+    }
+   
+  </style>
+</head>
+<body>
+  <h1>Welcome to EmergeXpert!!</h1>
+  <div class="container">
+    <!-- User Login Container -->
+    <div class="login-container" id="userLoginContainer">
+      <h2>User Login</h2>
+      <form id="userLoginForm">
+        <label for="userUsername">Username:</label>
+        <input type="text" id="userUsername" required>
+        <br><br>
+        <label for="userPassword">Password:</label>
+        <input type="password" id="userPassword" required>
+        <br><br>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <!-- GIF Container -->
+    <div class="img-container">
+      <img src="userlog.gif" alt="Animated GIF" width="500" height="400">
+    </div>
+  </div>
+
+  <script>
+    
+    // Add event listener to handle form submissions
+    document.getElementById("userLoginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const username = document.getElementById("userUsername").value;
+      const password = document.getElementById("userPassword").value;
+      // Perform user login logic
+      console.log("User login submitted");
+      console.log("Username:", username);
+      console.log("Password:", password);
+
+      // Check if the login credentials are correct (Add your logic here)
+      // For example, you can hardcode the correct credentials as follows:
+      const correctUsername = "Aadhya";
+      const correctPassword = "user@123";
+     
+      if (username === correctUsername && password === correctPassword) {
+        // Redirect to another page when login is successful
+        window.location.href = "Hackathon.html";
+      } else {
+        alert("Invalid login credentials. Please try again.");
+      }
+    });
+
+    const userLoginContainer = document.getElementById("userLoginContainer");
+
+  </script>
+</body>
+</html>

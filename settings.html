@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            
+            margin: 10px;
+            background-image: url('aih_set.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+        }
+        .settings-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .settings-section {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 26px; /* Increase label font size */
+        }
+        input[type="checkbox"] {
+            margin-bottom: 10px;
+            display: inline-block;
+            font-size: 26px; /* Increase checkbox font size */
+            width: 20px; /* Increase checkbox width */
+            height: 20px; /* Increase checkbox height */
+        }
+        select {
+            margin-bottom: 10px;
+            display: inline-block;
+            font-size: 26px; /* Increase input font size */
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px; /* Increase link font size */
+        }
+        /* Additional CSS to change color of History and Help links */
+        .settings-section a {
+            color: black;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Settings</h1>
+    
+        <!-- Notification Settings -->
+        <div class="settings-section">
+            <h2>Notification</h2>
+            <label for="notifications">Receive Notifications:</label>
+            <input type="checkbox" id="notifications">
+        </div>
+
+        <!-- Language Settings -->
+        <div class="settings-section">
+            <h2>Language</h2>
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="tl">Telugu</option>
+                <option value="hi">Hindi</option>
+                <option value="es">Spanish</option>
+                <option value="es">Urdu</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="ja">Japanese</option>
+                <!-- Add more language options as needed -->
+            </select>
+        </div>
+
+        <div class="settings-section">
+            <a href="history.html">History</a>
+        </div>
+
+        <!-- Help Settings -->
+        <div class="settings-section">
+            <a href="help.html">Help</a>
+        </div>
+    </div>
+</body>
+</html>

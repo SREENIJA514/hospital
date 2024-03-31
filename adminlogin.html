@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Logins in One Page</title>
+  <style>
+    /* Basic styling, you can modify it to fit your design */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .login-container {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to EmergeXpert</h1>
+
+ <div class="login-container" id="adminLoginContainer">
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm">
+      <label for="adminUsername">Username:</label>
+      <input type="text" id="adminUsername" required>
+      <br><br>
+      <label for="adminPassword">Password:</label>
+      <input type="password" id="adminPassword" required>
+      <br>
+	<br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+<script>
+    // Add event listeners to handle form submissions
+    document.getElementById("adminLoginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const username = document.getElementById("adminUsername").value;
+      const password = document.getElementById("adminPassword").value;
+      // Perform admin login logic
+      console.log("Admin login submitted");
+      console.log("Username:", username);
+      console.log("Password:", password);
+    });
+
+  const adminLoginContainer = document.getElementById("adminLoginContainer");
+</script>
+</body>
+</html>

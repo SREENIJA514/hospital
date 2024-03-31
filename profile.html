@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      
+                  background-image: url('aih_pro.jpg');
+                  background-repeat: no-repeat;
+                  background-attachment: local;
+                  background-size: small;
+                  background-position:center center;
+          
+              
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+  
+    #logoutBtn {
+      margin-top: 10px;
+    }
+    .gender-section {
+      display: flex;
+      align-items: center;
+    }
+    .gender-section label {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Profile</h1>
+  <form id="profileForm">
+    <label for="fullName">Name:</label>
+    <input type="text" id="fullName" required value="Aadhya">
+    <label for="age">Age:</label>
+    <input type="number" id="age" required value="25">
+    
+    
+    <div class="gender-section">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female" required checked>
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="Other" required>
+      <label for="other">Other</label>
+    </div>
+    
+    <label for="address">Address:</label>
+    <textarea id="address" rows="4" required>Madhura Nagar, Kukatpally,Hyderabad</textarea>
+    <button type="submit">Save Profile</button>
+  </form>
+
+  
+  <button id="logoutBtn">Logout</button>
+
+  <script>
+   
+    const profileForm = document.getElementById("profileForm");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    profileForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const fullName = document.getElementById("fullName").value;
+      const age = document.getElementById("age").value;
+      const address = document.getElementById("address").value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+
+      
+      const profileData = `Name: ${fullName}\nAge: ${age}\nGender: ${gender}\nAddress: ${address}`;
+      alert(profileData);
+    });
+
+    logoutBtn.addEventListener("click", function() {
+      
+      alert("Logged out successfully!");
+    });
+  </script>
+</body>
+</html>
+
+

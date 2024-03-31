@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Choose Blood Group</title>
+<style>
+  body {
+    text-align: center;
+    background-image: url('aih_back4.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+  }
+  .blood-group {
+    display: block;
+    margin: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Choose Required Blood Group</h2>
+
+<form>
+  <label class="blood-group">
+    <input type="radio" name="bloodGroup" value="A+"> A+
+  </label>
+  <label class="blood-group">
+    <input type="radio" name="bloodGroup" value="A-"> A-
+  </label>
+  <label class="blood-group">
+    <input type="radio" name="bloodGroup" value="B+"> B+
+  </label>
+  <label class="blood-group">
+    <input type="radio" name="bloodGroup" value="B-"> B-
+  </label>
+  <label class="blood-group">
+    <input type="radio" name="bloodGroup" value="AB+"> AB+
+  </label>
+  <label class="blood-group">
+    <input type="radio" name="bloodGroup" value="AB-"> AB-
+  </label>
+  <label class="blood-group">
+    <input type="radio" name="bloodGroup" value="O+"> O+
+  </label>
+  <label class="blood-group">
+    <input type="radio" name="bloodGroup" value="O-"> O-
+  </label>
+
+  <br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+<div>
+  <h3>Selected Blood Group:</h3>
+  <p id="selectedBloodGroup"></p>
+</div>
+
+<script>
+  const form = document.querySelector('form');
+  const selectedBloodGroup = document.getElementById('selectedBloodGroup');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const selectedOption = document.querySelector('input[name="bloodGroup"]:checked');
+    if (selectedOption) {
+      selectedBloodGroup.textContent = `You selected blood group: ${selectedOption.value}`;
+    } else {
+      selectedBloodGroup.textContent = 'Please select a blood group';
+    }
+  });
+</script>
+
+</body>
+</html>

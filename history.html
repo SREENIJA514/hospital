@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EmergeXpert Search History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #historyContainer {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .searchItem {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+        .ratingContainer {
+            display: flex;
+            align-items: center;
+        }
+        .ratingLabel {
+            margin-right: 5px;
+        }
+        .ratingStars {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="historyContainer">
+        <h1>Search History - EmergeXpert</h1>
+        <div id="searchHistory"></div>
+    </div>
+
+    <script>
+        // Sample data for demonstration purposes
+        const pastSearches = [
+            { term: 'Heart attack', date: '2023-08-01 10:15:00', ambulance:'YES', rating: 4 },
+            { term: 'Head injury', date: '2023-07-02 14:30:00', ambulance:'YES',rating: 5 },
+            { term: 'Burns', date: '2023-05-03 09:45:00',ambulance:'NO', rating: 3 },
+            { term: 'Blood Group-A+', date: '2023-03-03 09:45:00', rating: 4.5 }
+            // Add more search items here
+        ];
+
+        // Function to display search history
+        function displaySearchHistory() {
+            const historyContainer = document.getElementById('searchHistory');
+
+            if (pastSearches.length === 0) {
+                historyContainer.innerHTML = '<p>No past searches found.</p>';
+                return;
+            }
+
+            let searchHistoryHTML = '';
+            for (const search of pastSearches) {
+                searchHistoryHTML += `
+                    <div class="searchItem">
+                        <strong>Search Term:</strong> ${search.term}<br>
+                        <strong>Date:</strong> ${search.date}<br>
+                        <strong>Ambulance:</strong> ${search.ambulance}<br>
+                        <div class="ratingContainer">
+                            <span class="ratingLabel">Your Rating:</span>
+                            ${getRatingStars(search.rating)}
+                        </div>
+                    </div>
+                `;
+            }
+
+            historyContainer.innerHTML = searchHistoryHTML;
+        }
+
+        // Function to generate rating stars
+        function getRatingStars(rating) {
+            const maxRating = 5;
+            let starsHTML = '';
+
+            for (let i = 1; i <= maxRating; i++) {
+                if (i <= rating) {
+                    starsHTML += '<span class="ratingStars">&#9733;</span>'; // Full star
+                } else {
+                    starsHTML += '<span class="ratingStars">&#9734;</span>'; // Empty star
+                }
+            }
+
+            return starsHTML;
+        }
+
+        // Call the function to display search history on page load
+        displaySearchHistory();
+    </script>
+</body>
+</html>

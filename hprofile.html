@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Add some basic styling to make the form look better */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-image: url('aih_pro.jpg');
+                  background-repeat: no-repeat;
+                  background-attachment:local;
+                  background-size: small;
+                  background-position:center center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+    /* Add margin to the logout button */
+    #logoutBtn {
+      margin-top: 10px;
+    }
+    .type-section {
+      display: flex;
+      align-items: center;
+    }
+    .type-section label {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hospital Profile</h1>
+  <div class="input-container">
+    <label for="hospitalName">Hospital Name:</label>
+    <input type="text" id="hospitalName" required value="Apollo" disabled>
+  </div>
+
+ 
+  <div class="type-section">
+    <label>Hospital Type:</label>
+    <input type="radio" id="private" name="hospitalType" value="Private" required checked disabled>
+    <label for="private">Private</label>
+    <input type="radio" id="Government" name="hospitalType" value="Government" required disabled>
+    <label for="Government">Government</label>
+    <input type="radio" id="community" name="hospitalType" value="community" required disabled>
+    <label for="community">Community</label>
+  </div>
+
+  <div class="input-container">
+    <label for="location">Location:</label>
+    <textarea id="location" rows="1" required disabled>Jubilee Hills, Hyderabad</textarea>
+  </div>
+
+ 
+  <button type="submit" id="saveBtn">Save Profile</button>
+
+  
+  <button id="logoutBtn">Logout</button>
+
+  <script>
+   
+    const profileForm = document.getElementById("profileForm");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    profileForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const hospitalName = document.getElementById("hospitalName").value;
+      const location = document.getElementById("location").value;
+      const hospitalType = document.querySelector('input[name="hospitalType"]:checked').value;
+
+     
+      const profileData = `Hospital Name: ${hospitalName}\nHospital Type: ${hospitalType}\nLocation: ${location}`;
+      alert(profileData);
+    });
+
+    logoutBtn.addEventListener("click", function() {
+      
+      alert("Logged out successfully!");
+    });
+  </script>
+</body>
+</html>
+
+
